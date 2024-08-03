@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/AliceBlue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:id="@+id/relative_sec"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/black">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Generate QR Code"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/idIVQrcode"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:padding="22dp"
+        android:layout_above="@+id/idEdt"
+        android:layout_below="@+id/relative_sec"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/qr_code_icons"
+        android:contentDescription="qr_code" />
+
+
+    <EditText
+        android:id="@+id/idEdt"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_above="@+id/idBtnGenerateQR"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:textColorHint="@color/white"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_dark_button"
+        android:layout_marginEnd="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="50dp"
+        android:autofillHints=""
+        android:hint="Enter your text"
+        android:inputType="text" />
+
+
+    <Button
+        android:id="@+id/idBtnGenerateQR"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:backgroundTint="@color/black"
+        android:layout_height="60dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="20dp"
+        android:text="Generate QR Code" />
+
+</RelativeLayout>

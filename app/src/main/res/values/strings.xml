@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">ToolsMon</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="account">Account</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="settings">Settings</string>
+    <string name="atr07">Atr07</string>
+    <string name="next_fragment">Next Fragment</string>
+    <string name="close_app">Close App</string>
+    <string name="accounts_fragment">Accounts Fragment</string>
+    <string name="dashboard_fragment">Dashboard Fragment</string>
+    <string name="profile_fragment">Profile Fragment</string>
+    <string name="settings_fragment">Settings Fragment</string>
+
+
+    <string name="stop_watch">Stopwatch</string>
+    <string name="timer">Timer</string>
+
+    <string name="seconds">Seconds</string>
+    <string name="minutes">Minutes</string>
+    <string name="hours">Hours</string>
+
+    <string name="timeIsUP">Time is up</string>
+
+
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="resume">Resume</string>
+    <string name="reset">Reset</string>
+
+
+    <string name="wrongInputForTimer">Please enter appropriate values !!</string>
+
+    <string name="weight_metric">Enter weight in KG</string>
+    <string name="height_metric">Enter height in Meter</string>
+    <string name="weight_imperial">Enter weight in pounds</string>
+    <string name="height_imperial">Enter height in inch</string>
+    <string name="bmi_result">BMI: %s</string>
+    <string name="bmi_cat_1">Very severely underweight</string>
+    <string name="bmi_cat_2">Severely underweight</string>
+    <string name="bmi_cat_3">Underweight</string>
+    <string name="bmi_cat_4">Normal (healthy weight)</string>
+    <string name="bmi_cat_5">Overweight</string>
+    <string name="bmi_cat_6">Obese Class I (Moderately obese)</string>
+    <string name="bmi_cat_7">Obese Class II (Severely obese)</string>
+    <string name="bmi_cat_8">Obese Class III (Very severely obese)</string>
+    <string name="bmi_cat_9">Obese Class IV (Morbidly Obese)</string>
+    <string name="bmi_cat_10">Obese Class V (Super Obese)</string>
+    <string name="bmi_cat_11">Obese Class VI (Hyper Obese)</string>
+    <string name="imperial">Inch and pounds System </string>
+    <string name="metric">Meter and kg System </string>
+    <string name="default_unit">metric</string>
+
+</resources>

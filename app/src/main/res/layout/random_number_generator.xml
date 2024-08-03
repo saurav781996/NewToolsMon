@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AliceBlue">
+
+    <RelativeLayout
+        android:id="@+id/relative_sec"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/black">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Random No Genrator"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_sec"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/max_value"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="30dp"
+                android:autofillHints=""
+                android:background="@drawable/bg_dark_button"
+                android:gravity="center"
+                android:hint="Max value"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@drawable/color_cursor" />
+
+
+            <EditText
+                android:id="@+id/range"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:autofillHints=""
+                android:background="@drawable/bg_dark_button"
+                android:gravity="center"
+                android:hint="Range"
+                android:text="999999"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@drawable/color_cursor" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/generate_number"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/black"
+            android:text="Generate Number" />
+
+
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/output"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        android:background="@color/black"
+        android:padding="22dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="90dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

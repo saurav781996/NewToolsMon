@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AliceBlue">
+
+    <RelativeLayout
+        android:id="@+id/relative_sec"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/black">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="BMI Calculator"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10dp"
+            android:onClick="bmiinfo"
+            android:src="@drawable/baseline_info_24"
+            app:tint="@color/white" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/sec_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+
+        android:orientation="vertical">
+
+
+        <AutoCompleteTextView
+            android:id="@+id/txt_height"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_dark_button"
+            android:digits="0123456789.,"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/height_metric"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@drawable/color_cursor" />
+
+
+        <AutoCompleteTextView
+            android:id="@+id/txt_weight"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/bg_dark_button"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/weight_metric"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@drawable/color_cursor" />
+
+
+        <TextView
+            android:id="@+id/txt_result_bmi"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="36dp"
+            android:gravity="center"
+            android:textColor="@color/app_blue"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            tools:text="BMI: 20" />
+
+
+        <TextView
+            android:id="@+id/txt_result_cat"
+            android:layout_width="match_parent"
+            android:background="@drawable/border_edittext"
+            android:textColor="@color/white"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            tools:text="" />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:textColor="#304FFE"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="Normal range (18.5 – 24.9)" />
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/check_bmi"
+        android:layout_marginBottom="50dp">
+
+
+        <RadioGroup
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/btn_metric"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="setSystemOfUnits"
+                android:text="@string/metric" />
+
+            <RadioButton
+                android:id="@+id/btn_imperial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="setSystemOfUnits"
+                android:text="@string/imperial" />
+        </RadioGroup>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="22dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/text_heading_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Metric System" />
+
+            <com.addisonelliott.segmentedbutton.SegmentedButtonGroup
+                android:id="@+id/use_metric"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_margin="4dp"
+                android:background="@color/white"
+                android:elevation="0dp"
+                app:borderColor="@color/app_blue"
+                app:borderWidth="1dp"
+                app:divider="@color/orange_700"
+                app:dividerPadding="10dp"
+                app:dividerWidth="0dp"
+                app:position="0"
+                app:radius="30dp"
+                app:ripple="true"
+                app:rippleColor="@color/white"
+                app:selectedBackground="@color/black">
+
+                <com.addisonelliott.segmentedbutton.SegmentedButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    app:drawableGravity="top"
+                    app:selectedTextColor="#FFFFFF"
+                    app:text="KG / meter"
+                    app:textColor="@color/black"
+                    app:textStyle="bold" />
+
+
+                <com.addisonelliott.segmentedbutton.SegmentedButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    app:drawableGravity="top"
+                    app:selectedTextColor="#FFFFFF"
+                    app:text="Pound / inch"
+                    app:textColor="@color/black"
+                    app:textStyle="bold" />
+            </com.addisonelliott.segmentedbutton.SegmentedButtonGroup>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/check_bmi"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/black"
+        android:text="Check BMI" />
+
+
+</RelativeLayout>

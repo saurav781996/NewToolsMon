@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "199665059114",
+    "project_id": "toolsmon-utility-app",
+    "storage_bucket": "toolsmon-utility-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199665059114:android:8c871e0826e1f6cda74a53",
+        "android_client_info": {
+          "package_name": "com.saurav.toolsmon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199665059114-hq6nvge29jckl8ndhcqmilobo5pobibv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_jLfV1YRS_sZmaD0XX5DBULJcO7bm6Oc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199665059114-hq6nvge29jckl8ndhcqmilobo5pobibv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

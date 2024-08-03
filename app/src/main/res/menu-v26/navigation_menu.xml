@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/privacy_policy"
+        android:iconTint="@color/colorPrimary"
+        android:title="About Us" />
+
+    <item
+        android:id="@+id/rate_app"
+        android:icon="@drawable/rate_app"
+        android:title="Rate App" />
+
+    <item
+        android:id="@+id/privacy_policy"
+        android:title="Privacy Policy" />
+
+
+    <item
+        android:id="@+id/share_app"
+        android:title="Share App" />
+<!--
+
+    <item
+        android:icon="@drawable/calendar_month"
+        android:id="@+id/contact_us"
+        android:title="Contact" />
+-->
+
+
+</menu>

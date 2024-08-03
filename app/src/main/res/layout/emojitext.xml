@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:id="@+id/relative_sec"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/black">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Emoji Text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_sec"
+        android:layout_centerInParent="true"
+        android:scrollbars="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/inputText"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/bg_dark_button"
+                android:gravity="center"
+                android:hint="Please enter your text here"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="18sp" />
+
+
+            <EditText
+                android:id="@+id/emojeeTxt"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="22dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_dark_button"
+                android:gravity="center"
+                android:hint="Please enter your emoji"
+                android:inputType="textShortMessage"
+                android:maxLength="2"
+                android:text=""
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="18sp" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:layout_marginBottom="45dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <ScrollView
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/convertedEmojeeTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:minHeight="300dp"
+                        android:layout_gravity="start"
+                        android:layout_margin="8dp"
+                        android:background="@color/black"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:hint=""
+                        android:inputType="textMultiLine"
+                        android:lineSpacingExtra="4dp"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </ScrollView>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <Button
+                android:id="@+id/convertEmojeeBtn"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="22dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:padding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="Convert" />
+
+
+            <LinearLayout
+                android:id="@+id/ly_bar_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/copyTxtBtn"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.5"
+                    android:background="@color/black"
+                    android:text="copy" />
+
+                <Button
+                    android:id="@+id/clearTxtBtn"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1.5"
+                    android:background="@color/black"
+                    android:text="clear"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/shareTxtBtn"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1.5"
+                    android:background="@color/black"
+                    android:text="share"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

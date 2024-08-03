@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/my_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rel_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <org.osmdroid.views.MapView
+                        android:id="@+id/map"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent" />
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/location_pointer" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="30dp" />
+
+
+            </RelativeLayout>
+
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:visibility="gone"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="-1dp" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Latitude:"
+                        android:textColor="#f5f5f5"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/latTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="Fetching data.."
+                        android:textColor="#f5f5f5"
+                        tools:layout_editor_absoluteX="179dp"
+                        tools:layout_editor_absoluteY="450dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Longitude:"
+                        android:textColor="#f5f5f5"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/lonTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="Fetching data.."
+                        android:textColor="#f5f5f5"
+                        tools:layout_editor_absoluteX="81dp"
+                        tools:layout_editor_absoluteY="592dp" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Address Line:"
+                    android:textColor="#f5f5f5"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/address_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:text="Fetching data.."
+                    android:textColor="#f5f5f5"
+                    tools:layout_editor_absoluteX="81dp"
+                    tools:layout_editor_absoluteY="592dp" />
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:text="City:"
+                        android:textColor="#f5f5f5"
+                        android:textSize="20dp" />
+
+
+                    <TextView
+                        android:id="@+id/city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="Fetching data.."
+                        android:textColor="#f5f5f5"
+                        tools:layout_editor_absoluteX="81dp"
+                        tools:layout_editor_absoluteY="592dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:text="State:"
+                        android:textColor="#f5f5f5"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="Fetching data.."
+                        android:textColor="#f5f5f5"
+                        tools:layout_editor_absoluteX="81dp"
+                        tools:layout_editor_absoluteY="592dp" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Country Code:"
+                        android:textColor="#f5f5f5"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/country_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="Fetching data.."
+                        android:textColor="#f5f5f5"
+                        tools:layout_editor_absoluteX="81dp"
+                        tools:layout_editor_absoluteY="592dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Postal Code:"
+                        android:textColor="#f5f5f5"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/postal_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="Fetching data.."
+                        android:textColor="#f5f5f5"
+                        tools:layout_editor_absoluteX="81dp"
+                        tools:layout_editor_absoluteY="592dp" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
+
+                <com.github.nikartm.button.FitButton
+                    android:id="@+id/share_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="30dp"
+                    android:gravity="center"
+                    app:fb_backgroundColor="#689F38"
+                    app:fb_cornerRadius="24dp"
+                    app:fb_rippleColor="#00445E"
+                    app:fb_shape="rectangle"
+                    app:fb_text="Share Location"
+                    app:fb_textColor="#F5F5F5"
+                    app:fb_textSize="20dp"
+                    app:fb_textStyle="bold" />
+
+
+                <com.github.nikartm.button.FitButton
+                    android:id="@+id/open_maps"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    app:fb_backgroundColor="#1976D2"
+                    app:fb_cornerRadius="24dp"
+                    app:fb_rippleColor="#00445E"
+                    app:fb_shape="rectangle"
+                    app:fb_text="Open Map View"
+                    app:fb_textColor="#F5F5F5"
+                    app:fb_textSize="20dp"
+                    app:fb_textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

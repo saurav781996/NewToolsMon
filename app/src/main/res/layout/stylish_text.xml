@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:id="@+id/relative_sec"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/black">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Stylish Text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textColor="@color/white"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textColorHint="@color/white"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bg_dark_button"
+        android:hint="Please enter your text here"
+        android:inputType="text" />
+
+
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="22dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:minHeight="300dp"
+        android:text="Your converted text will be here"
+        android:textColor="@color/white"
+        android:textSize="30dp" />
+
+
+    <com.github.nikartm.button.FitButton
+        android:layout_alignParentBottom="true"
+        android:id="@+id/convert"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="100dp"
+        android:gravity="center"
+        app:fb_backgroundColor="#03A9F4"
+        app:fb_cornerRadius="24dp"
+        app:fb_rippleColor="#00445E"
+        app:fb_shape="rectangle"
+        app:fb_text="Convert Text"
+        app:fb_textColor="#F5F5F5"
+        app:fb_textSize="20dp"
+        app:fb_textStyle="bold" />
+
+    <com.github.nikartm.button.FitButton
+        android:layout_alignParentBottom="true"
+        android:id="@+id/copy"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        app:fb_backgroundColor="#03A9F4"
+        app:fb_cornerRadius="24dp"
+        app:fb_rippleColor="#00445E"
+        app:fb_shape="rectangle"
+        app:fb_text="Copy Text"
+        app:fb_textColor="#F5F5F5"
+        app:fb_textSize="20dp"
+        app:fb_textStyle="bold" />
+
+
+</RelativeLayout>

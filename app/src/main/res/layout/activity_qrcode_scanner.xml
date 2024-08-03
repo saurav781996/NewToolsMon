@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AntiqueWhite"
+    android:orientation="vertical">
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/textFormat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text=" "
+        android:textColor="#FFA000" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/scanBtn"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/text_black_background"
+        android:gravity="center"
+        android:minHeight="400dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Please Scan a Barcode or QRcode."
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/scanBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:backgroundTint="#0F9D58"
+        android:text="Scan"
+        android:visibility="gone" />
+
+
+    <com.github.nikartm.button.FitButton
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_above="@+id/finish"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:onClick="sendQrCoDedata"
+        app:fb_backgroundColor="#388E3C"
+        app:fb_cornerRadius="24dp"
+        app:fb_rippleColor="#00445E"
+        app:fb_shape="rectangle"
+        app:fb_text="Send"
+        app:fb_textColor="#F5F5F5"
+        app:fb_textSize="20dp"
+        app:fb_textStyle="bold" />
+
+    <com.github.nikartm.button.FitButton
+        android:id="@+id/finish"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:onClick="finish"
+        app:fb_backgroundColor="#03A9F4"
+        app:fb_cornerRadius="24dp"
+        app:fb_rippleColor="#00445E"
+        app:fb_shape="rectangle"
+        app:fb_text="Go Back"
+        app:fb_textColor="#F5F5F5"
+        app:fb_textSize="20dp"
+        app:fb_textStyle="bold" />
+
+
+</RelativeLayout>

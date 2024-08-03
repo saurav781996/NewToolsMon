@@ -1,0 +1,74 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+}
+
+android {
+    namespace 'com.example.newtoolsmon'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.saurav.toolsmon"
+        minSdk 24
+        targetSdk 33
+        versionCode 6
+        versionName "3.1"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            debuggable false // means your will be encrypted
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+
+    implementation ('org.uncommons.maths:uncommons-maths:1.2.2') {
+        exclude group: 'jfree'
+    }
+    implementation 'com.kazakago.cryptore:cryptore:1.4.0'
+
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.1.0'
+    implementation 'com.an.deviceinfo:deviceinfo:0.1.5'
+    implementation 'io.github.nikartm:fit-button:2.0.0'
+    implementation 'org.osmdroid:osmdroid-android:6.1.14'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    implementation 'com.hbb20:ccp:2.3.1'
+    implementation 'com.journeyapps:zxing-android-embedded:4.1.0'
+    implementation files('libs/commonwithoutstorage_two.aar')
+    implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.3'
+    implementation 'com.imankur.library:analogclockview:1.0.0'
+    implementation 'com.github.QuadFlask:colorpicker:0.0.15'
+    // segment button
+    implementation 'com.github.addisonelliott:SegmentedButton:3.1.9'
+    implementation 'com.google.android.play:core:1.10.3'
+    implementation 'com.google.android.gms:play-services-vision:20.1.3'
+    implementation 'com.google.firebase:firebase-crashlytics:18.3.2'
+    implementation 'com.google.firebase:firebase-analytics:21.2.0'
+
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
